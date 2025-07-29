@@ -1,0 +1,29 @@
+agent:
+  alpha: 0.1
+  gamma: 0.95
+  epsilon: 0.2
+  num_episodes: 1000
+  Q_init: ''  # Q possible be updated by one labeled sequence to reach the goal, the sequence generated ones from labeled constrains
+  init_sequence_path: "C:/Users/spaste01/Documents/Research/data"
+
+  train:
+    alpha: 0.1
+    gamma: 0.9
+    behavior_policy_epsilon: 0.2
+    num_episodes: 1000# LLM generates initial constrains, flag whether to use them or not
+    mode: "MCC" # MCC/TD
+
+env:
+  json_path: "C:/Users/spaste01/Documents/Research/data"
+  reward_per_step: -0.1
+  reward_final: 1.0
+  constraints_flag: True
+  reward_type: "dense"
+
+results:
+  save_dir: "C:/Users/Sveta/PycharmProjects/Results/PPO_RL"
+
+
+
+
+
